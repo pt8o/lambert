@@ -1,0 +1,20 @@
+title: Lambert Intellectual Property Law
+tagline:
+description:
+author:
+baseurl:
+url:
+
+markdown: rdiscount
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+sass:
+  sass_dir: _scss
+  style: compressed
