@@ -1,0 +1,46 @@
+nav {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  max-width: $max-width;
+  height: 96px;
+
+  padding: 8px 16px;
+
+  color: $red;
+  border: 1px solid black;
+
+  > div {
+    text-transform: uppercase;
+  }
+
+  // Absolute width so that .middle is properly centered
+  > .left, > .right {
+    width: 240px;
+  }
+
+  .left {
+    margin-right: auto;
+  }
+
+  .middle {
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .right {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .logo {
+    height: 100%;
+  }
+}
