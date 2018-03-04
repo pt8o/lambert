@@ -1,4 +1,4 @@
-nav {
+nav#header {
   display: flex;
   align-items: center;
 
@@ -8,24 +8,42 @@ nav {
 
   width: 100%;
   max-width: $max-width;
-  height: 96px;
+  height: $nav-height;
 
   padding: 8px 16px;
 
   color: $red;
-  border: 1px solid black;
 
-  > div {
-    text-transform: uppercase;
+  &.scrolled {
+    border-bottom: 1px solid $red;
   }
 
-  // Absolute width so that .middle is properly centered
-  > .left, > .right {
-    width: 240px;
+  .menu-item {
+    text-transform: uppercase;
+    cursor: default;
+
+    a {
+      color: $red;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .left {
-    margin-right: auto;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    width: 0;
+    overflow: visible;
+
+    img {
+      position: absolute;
+      min-width: 240px
+    }
   }
 
   .middle {
@@ -33,14 +51,88 @@ nav {
 
     margin-left: auto;
     margin-right: auto;
+
+    > .menu-item {
+      $menu-width: 144px;
+      $menu-padding: 8px 16px;
+
+      display: flex;
+      align-items: center;
+      width: $menu-width;
+      padding: $menu-padding;
+
+      position: relative;
+
+      border: 1px solid transparent;
+
+      &:nth-of-type(2) {
+        border-left-color: $red;
+        margin-left: -1px;
+      }
+
+      .icon {
+        margin-left: 8px;
+        width: 18px;
+        height: 18px;
+      }
+
+      // Dropdown menu
+      .dropdown {
+        display: none;
+        position: absolute;
+        font-size: $font-sm;
+        top: 100%;
+        left: 0;
+
+        width: $menu-width;
+        margin-top: -1px;
+        margin-left: -1px;
+
+        border: 1px solid;
+        background-color: $white;
+
+        padding: $menu-padding;
+
+        > .menu-item {
+          text-transform: none;
+          padding: 8px 0;
+        }
+      }
+
+      &:hover {
+        border: 1px solid;
+
+        .dropdown {
+          display: block;
+        }
+      }
+    }
   }
 
   .right {
-    margin-left: auto;
+    display: flex;
+    align-items: center;
     text-align: right;
+    position: relative;
+    max-width: 0;
+    overflow: visible;
+    height: 100%;
+
+    > a {
+      position: absolute;
+      min-width: auto;
+      white-space: nowrap;
+      right: 0;
+    }
   }
 
   .logo {
     height: 100%;
+  }
+
+  @media all and (max-width: $tablet) {
+    .mobile-hide {
+      // display: none;
+    }
   }
 }

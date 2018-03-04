@@ -1,9 +1,11 @@
+// General rules and overrides
 * {
   box-sizing: border-box;
 }
 
 html {
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 body {
@@ -11,6 +13,24 @@ body {
   justify-content: center;
 }
 
+// Override HTML elment defaults
+button {
+  border: 0;
+  color: inherit;
+  background-color: inherit;
+  text-transform: inherit;
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+    list-style-position: inside;
+  }
+}
+
+// Limit images to container size unless stated otherwise (convenenient for SVGs)
 img {
   max-width: 100%;
   max-height: 100%;
