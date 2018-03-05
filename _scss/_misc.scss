@@ -5,7 +5,11 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: $font-default;
+
+  @media all and (max-width: $tablet) {
+    font-size: $font-mobile;
+  }
 }
 
 body {
@@ -13,12 +17,17 @@ body {
   justify-content: center;
 }
 
-// Override HTML elment defaults
+// Override HTML element defaults
 button {
   border: 0;
   color: inherit;
   background-color: inherit;
   text-transform: inherit;
+}
+
+a {
+  color: inherit;
+  background-color: inherit;
 }
 
 ul {
@@ -30,8 +39,18 @@ ul {
   }
 }
 
-// Limit images to container size unless stated otherwise (convenenient for SVGs)
+// Images
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+// Padding to adjust for nav height
+body {
+  margin-top: $nav-height;
 }

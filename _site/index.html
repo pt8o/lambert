@@ -14,11 +14,13 @@
 <body>
   <div class="container">
     <nav id="header">
-  <div class="left logo">
-    <img src="./img/logo.svg"/>
-  </div>
+  <!-- Logo and site ID  -->
+  <h1 class="left logo">
+    <img src="./img/logo.svg" alt="Lambert Intellection Property Law"/>
+  </h1>
 
-  <div class="middle mobile-hide">
+  <!-- Navigation (desktop) -->
+  <div class="middle desktop-menu">
     <div class="menu-item">
       <a href="#">Our work</a>
       <div class="icon">
@@ -26,25 +28,26 @@
       </div>
 
       <ul class="dropdown">
-        <li class="menu-item">
-          <a href="#">Patents</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Trademarks</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Copyright</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Industrial Designs</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Trade Secrets</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Litigation</a>
-        </li>
-      </ul>
+  <li class="menu-item">
+    <a href="#">Patents</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Trademarks</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Copyright</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Industrial Designs</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Trade Secrets</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Litigation</a>
+  </li>
+</ul>
+
     </div>
 
     <div class="menu-item">
@@ -54,25 +57,86 @@
       </div>
 
       <ul class="dropdown">
-        <li class="menu-item">
-          <a href="#">About us</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Community</a>
-        </li>
-      </ul>
+  <li class="menu-item">
+    <a href="#">About us</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Community</a>
+  </li>
+</ul>
+
     </div>
   </div>
 
-  <div class="right mobile-hide menu-item">
+  <div class="right desktop-menu menu-item">
     <a href="#">Contact us</a>
+  </div>
+
+  <!-- Navigation (mobile) -->
+  <div id="mobile-menu" class="menu-item">
+    <button id="menu-toggle">
+      <span>Menu</span>
+      <div class="icon">
+        <img id="icon-open" src="./img/menu-open.svg"/>
+        <img id="icon-close" src="./img/menu-close.svg"/>
+      </div>
+    </button>
+  </div>
+</nav>
+
+<nav id="mobile-menu-content">
+  <div id="overlay"></div>
+  <div class="section">
+    <div class="left">
+      <div class="heading"><a href="#">Our work</a></div>
+      <ul class="dropdown">
+  <li class="menu-item">
+    <a href="#">Patents</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Trademarks</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Copyright</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Industrial Designs</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Trade Secrets</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Litigation</a>
+  </li>
+</ul>
+
+    </div>
+
+    <div class="right">
+      <div class="heading"><a href="#">Our people</a></div>
+      <ul class="dropdown">
+  <li class="menu-item">
+    <a href="#">About us</a>
+  </li>
+  <li class="menu-item">
+    <a href="#">Community</a>
+  </li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="heading"><a href="#">Contact us</a></div>
   </div>
 </nav>
 
 
     <div class="content">
       <div>
-  CONTENT
+  <div id="splash">
+    CONTENT
+  </div>
 </div>
 
     </div>
