@@ -8,16 +8,17 @@ nav#header {
   z-index: 100;
 
   width: 100%;
-  max-width: $max-width;
+  max-width: $container-width;
   height: $nav-height;
 
   padding: 8px 16px;
 
   background-color: $white;
   color: $red;
-  transition: box-shadow 300ms;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 300ms;
 
-  &.scrolled {
+  &.scrolled:not(.opened) {
     border-bottom: 1px solid $red;
   }
 
@@ -153,7 +154,6 @@ nav#header {
         &:active {
           top: auto;
           left: auto;
-
         }
 
         .icon {
@@ -191,7 +191,7 @@ nav#header {
 
   position: fixed;
   left: 0;
-  top: -100vh;
+  top: -120vh;
   z-index: 99;
   overflow-y: auto;
 
@@ -243,6 +243,12 @@ nav#header {
   }
 }
 
+@media all and (min-width: $tablet) {
+  #mobile-menu-content {
+    display: none;
+  }
+}
+
 @media all and (max-width: $tablet) {
   #mobile-menu-content.opened {
     top: 0;
@@ -250,5 +256,12 @@ nav#header {
 
   nav#header.opened {
     box-shadow: 0 0 5px 0 $black;
+  }
+}
+
+@media all and (min-width: $container-width) {
+  nav#header {
+    left: 50%;
+    margin-left: -($container-width / 2);
   }
 }

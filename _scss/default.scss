@@ -1,6 +1,13 @@
-.container {
+#main-container {
   width: 100%;
-  max-width: $max-width;
+  max-width: $container-width;
+  min-height: 100vh;
+  background-color: $white;
+  padding-top: $nav-height;
+
+  @media all and (min-width: $container-width) {
+    box-shadow: 0 0 5px -2px;
+  }
 }
 .content {
 

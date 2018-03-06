@@ -39,6 +39,12 @@ ul {
   }
 }
 
+// Body/container layout, styling
+body {
+  background-color: $grey;
+  height: auto;
+}
+
 // Images
 img {
   max-width: 100%;
@@ -48,9 +54,4 @@ img {
 .icon {
   width: 20px;
   height: 20px;
-}
-
-// Padding to adjust for nav height
-body {
-  margin-top: $nav-height;
 }
