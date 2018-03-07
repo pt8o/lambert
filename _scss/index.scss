@@ -1,12 +1,27 @@
 #splash-images {
+  height: calc(100vh - #{$nav-height});
+  min-height: 65vw;
   position: relative;
 
-  > img {
-    position: relative;
-    min-width: $img-max;
+  @media all and (min-width: $container-width) { min-height: 840px; }
+  @media all and (max-width: $img-max) { min-height: 585px; }
 
-    @media all and (max-width: $img-max) {
-      float: right;
+  > img {
+    position: absolute;
+    right: 0;
+    min-width: $img-max;
+  }
+
+  #gondola {
+    top: 0;
+    z-index: 1;
+
+    @media all and (max-width: 600px) {
+      right: -100px;
     }
+  }
+
+  #mountains {
+    bottom: 0;
   }
 }
