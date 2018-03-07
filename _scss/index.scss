@@ -16,9 +16,7 @@
     top: 0;
     z-index: 1;
 
-    @media all and (max-width: 600px) {
-      right: -100px;
-    }
+    @media all and (max-width: $phone-landscape) { right: -100px; }
   }
 
   #mountains {

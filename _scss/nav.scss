@@ -18,8 +18,14 @@ nav#header {
   border-bottom: 1px solid transparent;
   transition: border-bottom-color 300ms;
 
-  &.scrolled:not(.opened) {
-    border-bottom: 1px solid $red;
+  &.scrolled {
+    border-bottom-color: $red;
+  }
+
+  @media all and (max-width: $tablet) {
+    &.opened {
+      border-bottom-color: transparent;
+    }
   }
 
   .menu-item {
@@ -85,10 +91,11 @@ nav#header {
         margin-left: 8px;
         width: 14px;
         height: 14px;
+        transition: opacity 300ms;
+        opacity: 0;
 
-        &.up {
-          display: none;
-        }
+        &.up { opacity: 0; }
+        &.down { opacity: 1; }
       }
 
       .dropdown {
@@ -124,8 +131,8 @@ nav#header {
 
       // Only "stuck" open (via tap on mobile)
       &.opened {
-        .icon.down { display: none; }
-        .icon.up { display: block; }
+        .icon.down { opacity: 0; }
+        .icon.up { opacity: 1; }
       }
     }
   }
@@ -198,8 +205,6 @@ nav#header {
 }
 
 #mobile-menu-content {
-  display: flex;
-  flex-direction: column;
   // font-size: $font-mobile;
 
   position: fixed;
@@ -212,24 +217,10 @@ nav#header {
   width: 100vw;
   height: 100vh;
 
-  background-color: $red;
+  background-color: $red-lt;
   color: $white;
-  opacity: 0.95;
 
   transition: top 300ms linear;
-
-  // #overlay {
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //
-  //   width: 100vw;
-  //   height: 100vh;
-  //
-  //   background-color: $red;
-  //   z-index: -1;
-  //   opacity: 0.95;
-  // }
 
   .section {
     display: flex;

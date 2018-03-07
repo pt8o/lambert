@@ -1,0 +1,16 @@
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  min-height: $nav-height;
+  padding: $space-xl;
+
+  color: $white;
+  background-color: $red-lt;
+  position: relative;
+  z-index: 1;
+}

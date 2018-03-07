@@ -3,6 +3,7 @@ $black: #000;
 $white: #fff;
 $grey: #fafafa;
 $red: #c13036;
+$red-lt: rgba($red, 0.95);
 
 // Spacing values
 $space-default: 8px;
@@ -14,6 +15,14 @@ $nav-height: 96px;
 $container-width: 1296px;
 $img-max: 900px;
 $tablet: 900px;
+$phone-landscape: 600px;
+$phone-portrait: 400px;
+
+/*
+  z-index values
+   10 top menu
+  100 top nav
+*/
 
 // Fonts
 $font-sm: 12px;

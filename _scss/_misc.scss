@@ -22,7 +22,7 @@ body {
 button {
   border: 0;
   color: inherit;
-  background-color: inherit;
+  background-color: transparent;
   text-transform: inherit;
 
   &:focus, &:active {
@@ -32,7 +32,7 @@ button {
 
 a {
   color: inherit;
-  background-color: inherit;
+  background-color: transparent;
 }
 nav, footer {
   a { text-decoration: none; }
