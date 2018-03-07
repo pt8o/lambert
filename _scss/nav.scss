@@ -28,7 +28,6 @@ nav#header {
 
     a {
       color: $red;
-      text-decoration: none;
 
       &:hover, &:focus {
         text-decoration: underline;
@@ -44,7 +43,7 @@ nav#header {
     width: 0;
     overflow: visible;
 
-    img {
+    a {
       position: absolute;
       min-width: 240px
     }
@@ -74,13 +73,24 @@ nav#header {
         margin-left: -1px;
       }
 
+      // Dropdown menu
+      .dropdown-toggle {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+      }
+
       .icon {
         margin-left: 8px;
         width: 14px;
         height: 14px;
+
+        &.up {
+          display: none;
+        }
       }
 
-      // Dropdown menu
       .dropdown {
         display: none;
         position: absolute;
@@ -103,12 +113,19 @@ nav#header {
         }
       }
 
+      // Any opened state
       &:hover, &.opened {
         border: 1px solid;
 
         .dropdown {
           display: block;
         }
+      }
+
+      // Only "stuck" open (via tap on mobile)
+      &.opened {
+        .icon.down { display: none; }
+        .icon.up { display: block; }
       }
     }
   }
@@ -128,10 +145,6 @@ nav#header {
       white-space: nowrap;
       right: $space-default;
     }
-  }
-
-  .logo {
-    height: 100%;
   }
 
   // Mobile
@@ -203,7 +216,7 @@ nav#header {
   color: $white;
   opacity: 0.95;
 
-  transition: top 300ms;
+  transition: top 300ms linear;
 
   // #overlay {
   //   position: absolute;
@@ -236,10 +249,6 @@ nav#header {
 
   ul li {
     margin-top: $space-lg;
-  }
-
-  a {
-    text-decoration: none;
   }
 }
 

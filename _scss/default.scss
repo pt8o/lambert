@@ -4,6 +4,7 @@
   min-height: 100vh;
   background-color: $white;
   padding-top: $nav-height;
+  overflow: hidden;
 
   @media all and (min-width: $container-width) {
     box-shadow: 0 0 5px -2px;

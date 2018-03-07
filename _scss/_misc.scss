@@ -15,6 +15,7 @@ html {
 body {
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 // Override HTML element defaults
@@ -23,11 +24,18 @@ button {
   color: inherit;
   background-color: inherit;
   text-transform: inherit;
+
+  &:focus, &:active {
+    outline: 0;
+  }
 }
 
 a {
   color: inherit;
   background-color: inherit;
+}
+nav, footer {
+  a { text-decoration: none; }
 }
 
 ul {

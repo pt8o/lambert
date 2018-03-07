@@ -1,0 +1,12 @@
+#splash-images {
+  position: relative;
+
+  > img {
+    position: relative;
+    min-width: $img-max;
+
+    @media all and (max-width: $img-max) {
+      float: right;
+    }
+  }
+}

@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Lambert I.P. Law | Home</title>
+  <title>Lambert Intellectual Property Law | Home</title>
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="./css/style.css"/>
@@ -16,16 +16,22 @@
     <nav id="header">
   <!-- Logo and site ID  -->
   <h1 class="left logo">
-    <img src="./img/logo.svg" alt="Lambert Intellection Property Law"/>
+    <a href="http://localhost:4000/index.html">
+      <img src="./img/logo.svg" alt="Lambert Intellection Property Law"/>
+    </a>
   </h1>
 
   <!-- Navigation (desktop) -->
   <div class="middle desktop-menu">
     <div class="menu-item">
-      <a href="#">Our work</a>
-      <div class="icon">
-        <img src="./img/arrow-down.svg"/>
-      </div>
+      <button class="dropdown-toggle">Our work
+        <div class="icon down">
+          <img src="./img/arrow-down.svg"/>
+        </div>
+        <div class="icon up">
+          <img src="./img/arrow-up.svg"/>
+        </div>
+      </button>
 
       <ul class="dropdown">
   <li class="menu-item">
@@ -51,10 +57,14 @@
     </div>
 
     <div class="menu-item">
-      <a href="#">Our people</a>
-      <div class="icon">
-        <img src="./img/arrow-down.svg"/>
-      </div>
+      <button class="dropdown-toggle">Our people
+        <div class="icon down">
+          <img src="./img/arrow-down.svg"/>
+        </div>
+        <div class="icon up">
+          <img src="./img/arrow-up.svg"/>
+        </div>
+      </button>
 
       <ul class="dropdown">
   <li class="menu-item">
@@ -133,7 +143,7 @@
 
 
     <div class="content">
-      <div>
+      <div id="splash-images">
   <img class="splash" id="gondola" src="./img/gondola.png" />
   <img class="splash" id="mountains" src="./img/mountains.png" />
 </div>
@@ -141,7 +151,7 @@
     </div>
 
     <footer>
-
+  <a href="#">Legal</a>
 </footer>
 
   </div>
