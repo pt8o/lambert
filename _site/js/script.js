@@ -12,7 +12,6 @@ $(document).ready(function() {
         } else {
             $('.menu-item.opened').removeClass('opened');
         };
-
     });
 
     // Window scroll effects
