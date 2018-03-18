@@ -1,0 +1,25 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 26vw;
+
+  background-size: cover;
+  background-position: center;
+
+  .text {
+    @extend %banner-text;
+  }
+
+
+  @media all and (min-width: $container-width) {
+    width: $container-width;
+    height: 348px;
+  }
+
+  @media all and (max-width: $phone-landscape) {
+    // width:
+  }
+}

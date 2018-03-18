@@ -39,3 +39,16 @@ $font-default: 14px;
 $font-mobile: 16px;
 $font-lg: 24px;
 $font-xl: 36px;
+
+// Typography
+%banner-text {
+  font-size: $font-lg;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $white;
+  letter-spacing: 5px;
+
+  @media all and (max-width: $phone-landscape) {
+    font-size: $font-mobile;
+  }
+}
