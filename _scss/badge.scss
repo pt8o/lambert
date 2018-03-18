@@ -5,7 +5,7 @@
 
   width: 25%;
 
-  padding: $space-lg 0;
+  padding: $space-lg 0 $space-xl;
   vertical-align: top;
 
   .default { display: inline-block; }
@@ -26,6 +26,7 @@
   .label {
     color: $red;
     font-size: $font-lg;
+    margin-top: $space-lg;
 
     // @media all and (max-width: $tablet) { max-width: 100px; }
     @media all and (max-width: $phone-landscape) { font-size: $font-mobile; }
@@ -34,6 +35,7 @@
 
 .badges {
   text-align: center;
+  padding: $space-xl 0;
 }
 
 #badges-mobile {
