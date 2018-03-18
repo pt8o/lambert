@@ -8,6 +8,9 @@
 @import 'banner';
 @import 'footer';
 @import 'nav';
+
+// Reused bits (but not true partials)
+@import 'description-section';
 @import 'sidebar';
 
 // Layouts

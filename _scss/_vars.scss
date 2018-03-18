@@ -48,3 +48,19 @@ $font-xl: 36px;
   color: $white;
   letter-spacing: 5px;
 }
+
+%title-text {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $white;
+  letter-spacing: 5px;
+}
+
+// Decorations
+%ribbon {
+  &:before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+  }
+}

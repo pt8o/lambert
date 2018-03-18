@@ -1,0 +1,25 @@
+.description-section {
+  position: relative;
+  width: 66%;
+  background-color: $grey;
+  box-shadow: 0 0 5px -2px;
+
+  padding: 64px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    // top: 0;
+    height: 64px;
+    line-height: 64px;
+    margin-top: -80px;
+    left: $space-xl;
+
+    @extend %title-text;
+    background-color: $red;
+    padding: 0 $space-xl;
+  }
+}
