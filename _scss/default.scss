@@ -3,7 +3,7 @@
   max-width: $container-width;
   min-height: 100vh;
   background-color: $white;
-  padding-top: $nav-height;
+  @include nav-height(padding-top);
   overflow: hidden;
 
   @media all and (min-width: $container-width) {

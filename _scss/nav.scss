@@ -9,9 +9,12 @@ nav#header {
 
   width: 100%;
   max-width: $container-width;
-  height: $nav-height;
+  @include nav-height(height);
 
-  padding: 8px 16px;
+  padding: 0 16px;
+  @media all and (max-width: $tablet) {
+    padding: 0 4px;
+  }
 
   background-color: $white;
   color: $red;
@@ -50,8 +53,14 @@ nav#header {
     overflow: visible;
 
     a {
+      display: flex;
+      align-items: center;
       position: absolute;
-      min-width: 240px
+      min-width: 240px;
+
+      @media all and (max-width: $tablet) {
+        min-width: 136px;
+      }
     }
   }
 
@@ -215,7 +224,10 @@ nav#header {
   z-index: 99;
   overflow-y: auto;
 
-  padding: $nav-height $space-xl $space-xl;
+  @include nav-height(padding-top);
+  padding-left: $space-xl;
+  padding-right: $space-xl;
+
   width: 100vw;
   height: 100vh;
 

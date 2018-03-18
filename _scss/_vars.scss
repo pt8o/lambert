@@ -10,6 +10,15 @@ $space-default: 8px;
 $space-lg: 16px;
 $space-xl: 32px;
 $nav-height: 96px;
+$nav-height-sm: 48px;
+
+@mixin nav-height($property) {
+  #{$property}: $nav-height;
+
+  @media all and (max-width: $tablet) {
+    #{$property}: $nav-height-sm;
+  }
+}
 
 // General layout, mobile widths
 $container-width: 1296px;
