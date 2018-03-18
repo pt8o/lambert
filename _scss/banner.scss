@@ -12,6 +12,8 @@
 
   .text {
     @extend %banner-text;
+    padding: 0 $space-lg $space-lg;
+    border-bottom: 1px solid $white;
   }
 
 
