@@ -5,6 +5,7 @@
 
   width: 100vw;
   height: 26vw;
+  min-height: 240px;
 
   background-size: cover;
   background-position: center;
@@ -17,9 +18,5 @@
   @media all and (min-width: $container-width) {
     width: $container-width;
     height: 348px;
-  }
-
-  @media all and (max-width: $phone-landscape) {
-    // width:
   }
 }

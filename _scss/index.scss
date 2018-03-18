@@ -10,6 +10,8 @@
     position: absolute;
     right: 0;
     min-width: $img-max;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   #gondola {

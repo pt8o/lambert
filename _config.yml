@@ -18,3 +18,8 @@ defaults:
 sass:
   sass_dir: _scss
   style: compressed
+
+collections:
+  pages:
+    output: true
+    permalink: /

@@ -1,0 +1,41 @@
+.badge {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+
+  width: 25%;
+
+  padding: $space-lg 0;
+  vertical-align: top;
+
+  .default { display: inline-block; }
+  .hovered { display: none; }
+
+  &:hover, &:focus {
+    .default { display: none; }
+    .hovered { display: inline-block; }
+  }
+
+  img {
+    max-width: 180px;
+
+    @media all and (max-width: $tablet) { max-width: 100px; }
+    @media all and (max-width: $phone-landscape) { max-width: 80px; }
+  }
+
+  .label {
+    color: $red;
+    font-size: $font-lg;
+
+    // @media all and (max-width: $tablet) { max-width: 100px; }
+    @media all and (max-width: $phone-landscape) { font-size: $font-mobile; }
+  }
+}
+
+.badges {
+  text-align: center;
+}
+
+#badges-mobile {
+
+}
