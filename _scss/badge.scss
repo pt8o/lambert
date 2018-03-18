@@ -11,7 +11,7 @@
   .default { display: inline-block; }
   .hovered { display: none; }
 
-  &:hover, &:focus {
+  &:hover, &:focus, &.active {
     .default { display: none; }
     .hovered { display: inline-block; }
   }

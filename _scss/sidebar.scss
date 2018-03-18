@@ -1,0 +1,50 @@
+// shared between Our Work and Our People
+.sidebar {
+  position: relative;
+  width: 33%;
+  float: right;
+
+  padding-left: 10%;
+
+  .title {
+    position: absolute;
+    transform: rotate(270deg);
+    left: 0;
+    top: 50%;
+    height: 32px;
+    margin-top: -16px;
+
+    @extend %banner-text;
+    font-size: $font-default;
+    color: $red;
+    border-bottom: 1px solid;
+    padding: 0 $space-lg $space-lg;
+  }
+
+  // 'Our work' badges
+  .badge {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: $space-default 0;
+
+    img {
+      max-width: 60px;
+    }
+
+    .label {
+      // display: none;
+      font-size: $font-default;
+      margin-top: 0;
+      margin-left: $space-lg;
+    }
+
+    &:hover, &.active {
+      .label {
+        display: block;
+      }
+    }
+  }
+
+  // 'Our people' list of names
+}
