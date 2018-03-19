@@ -1,10 +1,26 @@
 // shared between Our Work and Our People
 .sidebar {
-  position: relative;
-  width: 33%;
-  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: calc(100vh - #{$nav-height});
 
-  padding-left: 10%;
+  display: flex;
+  align-items: center;
+
+  width: 320px;
+
+  padding-left: 120px;
+  padding-right: $space-lg;
+  margin-top: $nav-height;
+
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms;
+
+  &.active {
+    opacity: 1;
+  }
 
   .title {
     position: absolute;
@@ -33,10 +49,11 @@
     }
 
     .label {
-      // display: none;
+      display: none;
       font-size: $font-default;
       margin-top: 0;
       margin-left: $space-lg;
+      text-align: left;
     }
 
     &:hover, &.active {

@@ -1,7 +1,7 @@
 // Colours
 $black: #000;
 $white: #fff;
-$grey: #fafafa;
+$grey: #eee;
 $red: #c13036;
 $red-lt: rgba($red, 0.95);
 
@@ -9,6 +9,7 @@ $red-lt: rgba($red, 0.95);
 $space-default: 8px;
 $space-lg: 16px;
 $space-xl: 32px;
+$space-xxl: 64px;
 $nav-height: 96px;
 $nav-height-sm: 48px;
 
@@ -59,8 +60,14 @@ $font-xl: 36px;
 // Decorations
 %ribbon {
   &:before {
+    content: " ";
     position: absolute;
-    width: 16px;
-    height: 16px;
+    top: 5px;
+    left: -12px;
+    width: 22.63px;
+    height: 22.63px;
+    background-color: $red;
+    transform: rotate(45deg);
+    z-index: -1;
   }
 }

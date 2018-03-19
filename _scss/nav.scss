@@ -21,6 +21,10 @@ nav#header {
   border-bottom: 1px solid transparent;
   transition: border-bottom-color 300ms;
 
+  a {
+    border-bottom: 0;
+  }
+
   &.scrolled {
     border-bottom-color: $red;
   }

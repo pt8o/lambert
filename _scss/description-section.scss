@@ -1,25 +1,29 @@
 .description-section {
   position: relative;
-  width: 66%;
+  width: calc(100% - 320px);
   background-color: $grey;
   box-shadow: 0 0 5px -2px;
 
-  padding: 64px;
+  padding: $space-xxl;
+  margin-bottom: $space-xxl;
 
   .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %ribbon;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-top: -$space-lg;
 
-    position: relative;
-    // top: 0;
-    height: 64px;
-    line-height: 64px;
-    margin-top: -80px;
+    height: $space-xxl;
+    line-height: $space-xxl;
     left: $space-xl;
 
     @extend %title-text;
     background-color: $red;
     padding: 0 $space-xl;
+  }
+
+  .text {
+    margin-top: $space-xl;
   }
 }
