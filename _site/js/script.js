@@ -59,19 +59,62 @@ $(document).ready(function() {
         }
     });
 
-    // Sticky sidebar
+    //// Fancy sidebar behaviours
     if ($('.sidebar')) {
+
+        // Measure description-section offsets
+        var active = 0;
+        var ranges = [];
+        var sections = [];
+        var entries = [];
+
+        var scrollTop = $(window).scrollTop();
+        var midWindow = $(window).height() * 0.5;
+
+        $('#badges-sidebar .badge').each(function() {
+            entries.push($(this));
+        });
+
+        $('.description-section').each(function() {
+            sections.push($(this));
+            ranges.push([$(this).offset().top - midWindow]);
+        });
+
+        $(window).resize(function() {
+            midWindow = $(window).height() * 0.5;
+
+            for (var i=0; i<sections.length; i++) {
+                ranges[i] = [sections[i].offset().top - midWindow];
+            }
+            console.log(ranges);
+        });
+
         $(window).scroll(function() {
+            scrollTop = $(window).scrollTop();
+
+            console.log(scrollTop);
+
+            for (var i=0; i<sections.length; i++) {
+                if (scrollTop > ranges[i]) {
+                    entries[active].removeClass('active');
+                    entries[i].addClass('active');
+                    active = i;
+                }
+            }
+
+            // Show/hide sidebar on scroll
             if (!$('.sidebar').hasClass('active')) {
-                if ($(window).scrollTop() - $('.sidebar-reference').offset().top + 240 > 0) {
+                if (scrollTop - $('.sidebar-reference').offset().top + 240 > 0) {
                     $('.sidebar').addClass('active');
                 }
             } else {
-                if ($(window).scrollTop() - $('.sidebar-reference').offset().top + 240 < 0) {
+                if (scrollTop - $('.sidebar-reference').offset().top + 240 < 0) {
                     $('.sidebar').removeClass('active');
                 }
             }
 
+            // Activate sidebar elements when scrolled to corresponding part of page
         });
     }
+
 });
