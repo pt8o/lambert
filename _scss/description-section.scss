@@ -9,13 +9,13 @@
 
   .title {
     @extend %ribbon;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     position: absolute;
     top: 0;
     margin-top: -$space-lg;
 
-    height: $space-xxl;
-    line-height: $space-xxl;
+    min-height: $space-xxl;
     left: $space-xl;
 
     @extend %title-text;
@@ -25,5 +25,34 @@
 
   .text {
     margin-top: $space-xl;
+  }
+}
+
+// only 'Our people'
+#tonylambert {
+  margin-top: 80px;
+}
+
+.person-section {
+  .portrait {
+    min-width: 240px;
+    min-height: 240px;
+  }
+  .name {
+    position: absolute;
+    left: 320px;
+    font-weight: 300;
+    font-style: italic;
+    font-size: $font-xl;
+  }
+
+  .text {
+    margin-top: 240px;
+    font-size: $font-mobile;
+
+    p span {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
   }
 }

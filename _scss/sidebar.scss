@@ -64,4 +64,15 @@
   }
 
   // 'Our people' list of names
+  .person {
+    display: inline-block;
+    color: $red;
+    margin: $space-lg;
+    border-bottom: 2px solid transparent;
+
+    &.active, &:hover, &:focus {
+      font-weight: 700;
+      border-color: $red;
+    }
+  }
 }

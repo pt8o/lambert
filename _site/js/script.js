@@ -59,6 +59,8 @@ $(document).ready(function() {
         }
     });
 
+    // TODO: Smooth scroll on load
+
     //// Fancy sidebar behaviours
     if ($('.sidebar')) {
 
@@ -71,9 +73,17 @@ $(document).ready(function() {
         var scrollTop = $(window).scrollTop();
         var midWindow = $(window).height() * 0.5;
 
-        $('#badges-sidebar .badge').each(function() {
-            entries.push($(this));
-        });
+        if ($('#badges-sidebar')) {
+            $('#badges-sidebar .badge').each(function() {
+                entries.push($(this));
+            });
+        }
+
+        if ($('#people-sidebar')) {
+            $('#people-sidebar .person').each(function() {
+                entries.push($(this));
+            });
+        }
 
         $('.description-section').each(function() {
             sections.push($(this));
