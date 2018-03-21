@@ -8,7 +8,7 @@ nav#header {
   z-index: 100;
 
   width: 100%;
-  max-width: $container-width;
+  // max-width: $container-width;
   @include nav-height(height);
 
   padding: 0 16px;
@@ -287,9 +287,9 @@ nav#header {
   }
 }
 
-@media all and (min-width: $container-width) {
-  nav#header {
-    left: 50%;
-    margin-left: -($container-width / 2);
-  }
-}
+// @media all and (min-width: $container-width) {
+//   nav#header {
+//     left: 50%;
+//     margin-left: -($container-width / 2);
+//   }
+// }
