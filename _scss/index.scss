@@ -3,10 +3,11 @@
   min-height: 65vw;
   position: relative;
 
-  @media all and (min-width: $container-width) {
-    min-height: 840px;
-    margin-top: -500px;
-  }
+  // @media all and (min-width: $container-width) {
+  //   min-height: 840px;
+  //   margin-top: -500px;
+  // }
+
   @media all and (max-width: $img-max) { min-height: 585px; }
 
   > img {

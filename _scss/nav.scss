@@ -142,7 +142,7 @@ nav#header {
       }
 
       // Any opened state
-      &:hover, &.opened {
+      &:hover, &:focus, &.opened {
         border: 1px solid;
 
         .dropdown {

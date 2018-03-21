@@ -59,7 +59,7 @@ $(document).ready(function() {
         }
     });
 
-    // Sticky sidebar
+    // Show/hide sidebar on scroll
     if ($('.sidebar')) {
         $(window).scroll(function() {
             if (!$('.sidebar').hasClass('active')) {
@@ -71,7 +71,6 @@ $(document).ready(function() {
                     $('.sidebar').removeClass('active');
                 }
             }
-
         });
     }
 });

@@ -9,27 +9,29 @@
   <!-- Navigation (desktop) -->
   <div class="middle desktop-menu">
     <div class="menu-item">
-      <button class="dropdown-toggle">Our work
+      <div class="dropdown-toggle" tabindex=0>
+        <a href="{{ site.url }}/ourwork.html">Our work</a>
         <div class="icon down">
           <img src="./img/arrow-down.svg"/>
         </div>
         <div class="icon up">
           <img src="./img/arrow-up.svg"/>
         </div>
-      </button>
+      </div>
 
       {% include nav_ourwork.html %}
     </div>
 
     <div class="menu-item">
-      <button class="dropdown-toggle">Our people
+      <div class="dropdown-toggle" tabindex=0>
+        <a href="{{ site.url }}/ourpeople.html">Our people</a>
         <div class="icon down">
           <img src="./img/arrow-down.svg"/>
         </div>
         <div class="icon up">
           <img src="./img/arrow-up.svg"/>
         </div>
-      </button>
+      </div>
 
       {% include nav_ourpeople.html %}
     </div>
