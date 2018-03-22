@@ -59,7 +59,17 @@ $(document).ready(function() {
         }
     });
 
-    // TODO: Smooth scroll on load
+    // Smooth scroll on loading an anchor link
+    if (location.hash) {
+        window.scrollTo(0, 0);
+
+        setTimeout(function() {
+            $('html, body').animate({
+              scrollTop: $(location.hash).offset().top - 144 + 'px'
+            }, 1000, function() {
+            });
+        }, 1);
+    }
 
     //// Fancy sidebar behaviours
     if ($('.sidebar')) {
@@ -96,13 +106,10 @@ $(document).ready(function() {
             for (var i=0; i<sections.length; i++) {
                 ranges[i] = [sections[i].offset().top - midWindow];
             }
-            console.log(ranges);
         });
 
         $(window).scroll(function() {
             scrollTop = $(window).scrollTop();
-
-            console.log(scrollTop);
 
             for (var i=0; i<sections.length; i++) {
                 if (scrollTop > ranges[i]) {
