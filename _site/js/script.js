@@ -5,6 +5,12 @@ $(document).ready(function() {
         $('#mobile-menu-content').toggleClass('opened');
     });
 
+    // Hide menu when mobile menu clicked (bc many are anchor links)
+    $('#mobile-menu-content a').on('click tap', function() {
+        $('#header').removeClass('opened');
+        $('#mobile-menu-content').removeClass('opened');
+    });
+
     $('.dropdown-toggle').on('tap', function() {
         if (!$(this).parent('.menu-item').hasClass('opened')) {
             $('.menu-item.opened').removeClass('opened');
@@ -120,12 +126,19 @@ $(document).ready(function() {
             }
 
             // Show/hide sidebar on scroll
+            var scrolledPastRef = scrollTop - $('.sidebar-reference').offset().top + 240 > 0;
+            var scrolledPastHide = false;
+
+            if ($('.sidebar-hide').length) {
+                scrolledPastHide = scrollTop + $(window).height() - $('.sidebar-hide').offset().top > 0;
+            }
+
             if (!$('.sidebar').hasClass('active')) {
-                if (scrollTop - $('.sidebar-reference').offset().top + 240 > 0) {
+                if (scrolledPastRef && !scrolledPastHide) {
                     $('.sidebar').addClass('active');
                 }
             } else {
-                if (scrollTop - $('.sidebar-reference').offset().top + 240 < 0) {
+                if (!scrolledPastRef || scrolledPastHide) {
                     $('.sidebar').removeClass('active');
                 }
             }

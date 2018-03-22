@@ -1,10 +1,21 @@
 .description-section {
   position: relative;
+
   width: calc(100% - 320px);
   background-color: $grey;
   box-shadow: 0 0 5px -2px;
 
   padding: $space-xxl;
+
+  @media all and (max-width: $tablet) {
+    width: 100%;
+  }
+  @media all and (max-width: $phone-landscape) {
+    padding: $space-xl;
+    padding-top: $space-xxl;
+  }
+
+  margin-top: $space-xxl;
   margin-bottom: $space-xxl;
 
   .title {
@@ -20,7 +31,7 @@
 
     @extend %title-text;
     background-color: $red;
-    padding: 0 $space-xl;
+    padding: $space-lg $space-xl;
   }
 
   .text {
@@ -38,6 +49,7 @@
     min-width: 240px;
     min-height: 240px;
   }
+
   .name {
     position: absolute;
     left: 320px;
@@ -53,6 +65,14 @@
     p span {
       font-weight: 700;
       text-transform: uppercase;
+    }
+  }
+
+  @media all and (max-width: $phone-landscape) {
+    .name {
+      position: relative;
+      left: 0;
+      top: 200px;
     }
   }
 }

@@ -21,6 +21,7 @@
 
     @media all and (max-width: $tablet) { max-width: 100px; }
     @media all and (max-width: $phone-landscape) { max-width: 80px; }
+    @media all and (max-width: $phone-portrait) { max-width: 60px; }
   }
 
   .label {
@@ -30,6 +31,7 @@
 
     // @media all and (max-width: $tablet) { max-width: 100px; }
     @media all and (max-width: $phone-landscape) { font-size: $font-mobile; }
+    @media all and (max-width: $phone-portrait) { font-size: $font-default; }
   }
 }
 

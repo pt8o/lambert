@@ -69,6 +69,18 @@ body {
 section {
   padding: $space-xxl;
   font-size: $font-lg;
+  text-align: center;
+
+  p {
+    display: block;
+    position: relative;
+    text-align: left;
+    max-width: 960px;
+    @media all and (min-width: 1024px) {
+      left: 50%;
+      margin-left: -480px;
+    }
+  }
 
   @media all and (max-width: $phone-landscape) {
     padding: $space-lg;

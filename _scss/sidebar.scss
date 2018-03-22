@@ -76,3 +76,61 @@
     }
   }
 }
+
+// Move to top
+@media all and (max-width: $tablet) {
+  .sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: $nav-height-sm;
+    margin-top: $nav-height-sm;
+    padding: 0;
+    z-index: 10;
+    background-color: $white;
+    box-shadow: 0 2px 5px -2px;
+
+    &#people-sidebar {
+      display: none;
+    }
+
+    .title {
+      transform: none;
+      position: relative;
+      left: 0;
+      top: 0;
+      height: auto;
+      margin: 0;
+      margin-left: $space-default;
+      padding: 0;
+      border-bottom: 0;
+    }
+
+    .badges, .people {
+      display: flex;
+    }
+
+    .badge, .person {
+      &:hover, &:focus, &.active {
+        .label {
+          display: none;
+        }
+      }
+    }
+
+    .badge {
+      margin: 0 $space-default;
+    }
+
+    .badge img {
+      max-width: 40px;
+    }
+  }
+}
+
+@media all and (max-height: $height-limit), all and (max-width: $phone-portrait) {
+  .sidebar {
+    display: none;
+  }
+}
