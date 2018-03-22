@@ -66,6 +66,16 @@ body {
   height: auto;
 }
 
+section {
+  padding: $space-xxl;
+  font-size: $font-lg;
+
+  @media all and (max-width: $phone-landscape) {
+    padding: $space-lg;
+    font-size: $font-mobile;
+  }
+}
+
 // Text
 p {
   line-height: 2em;
