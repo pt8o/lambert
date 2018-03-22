@@ -6,11 +6,15 @@
 footer {
   display: flex;
   align-items: center;
-  min-height: $nav-height;
-  padding: $space-xl;
+  justify-content: center;
+  min-height: $nav-height-sm;
 
   color: $white;
   background-color: $red-lt;
   position: relative;
   z-index: 1;
+
+  a {
+    margin: 0 $space-lg;
+  }
 }

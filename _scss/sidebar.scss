@@ -130,7 +130,13 @@
 }
 
 @media all and (max-height: $height-limit), all and (max-width: $phone-portrait) {
-  .sidebar {
+  #badges-sidebar {
+    display: none;
+  }
+}
+
+@media all and (max-height: 400px), all and (max-width: $phone-portrait) {
+  #people-sidebar {
     display: none;
   }
 }

@@ -49,6 +49,10 @@ ul li {
   list-style-position: inside;
   line-height: 2em;
 }
+ol li {
+  line-height: 2em;
+  margin-bottom: 1.5em;
+}
 nav {
   ul {
     padding: 0;
@@ -71,7 +75,7 @@ section {
   font-size: $font-lg;
   text-align: center;
 
-  p {
+  > * {
     display: block;
     position: relative;
     text-align: left;
