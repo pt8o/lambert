@@ -230,7 +230,7 @@ nav#header {
 }
 
 #mobile-menu-content {
-  // font-size: $font-mobile;
+  font-size: $font-mobile;
 
   position: fixed;
   left: 0;
@@ -239,8 +239,6 @@ nav#header {
   overflow-y: auto;
 
   @include nav-height(padding-top);
-  padding-left: $space-xl;
-  padding-right: $space-xl;
 
   width: 100vw;
   height: 100vh;
@@ -251,19 +249,29 @@ nav#header {
   transition: top 300ms linear;
 
   .section {
-    display: flex;
-    justify-content: center;
     width: 100%;
     margin-top: $space-xl;
+    text-align: center;
 
-    .heading a {
-      text-transform: uppercase;
-      border-bottom: 1px solid $white;
+    .heading {
+      padding: $space-xl 0 $space-lg;
+
+      a {
+        text-transform: uppercase;
+        padding: $space-default $space-lg;
+        border: 1px solid;
+      }
     }
 
-    .left, .right { width: 140px; }
-    .left { margin-right: $space-lg; text-align: right; }
-    .right { margin-left: $space-lg; }
+    .left, .right {
+      display: block;
+    }
+
+    .menu-item {
+      display: inline-block;
+      margin: 0 $space-lg $space-default;
+      line-height: 2em;
+    }
   }
 
   ul li {
