@@ -6,8 +6,9 @@
 footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   min-height: $nav-height-sm;
+  padding-right: $space-default;
 
   color: $white;
   background-color: $red-lt;
