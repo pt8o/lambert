@@ -39,6 +39,14 @@
   }
 }
 
+// only 'Our work'
+.ourwork {
+  .description-section .text p:first-child {
+    font-size: $font-lg;
+    line-height: 1.4em;
+  }
+}
+
 // only 'Our people'
 #tonylambert {
   margin-top: 80px;
