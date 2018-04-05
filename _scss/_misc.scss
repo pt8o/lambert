@@ -92,6 +92,16 @@ section {
   }
 }
 
+.col-2 {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+
+  @media all and (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
 // Text
 p {
   line-height: 2em;
