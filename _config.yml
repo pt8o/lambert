@@ -3,7 +3,7 @@ tagline:
 description:
 author:
 baseurl:
-url: https://staging.superko.org/lambert
+url: http://www.lambertlaw.ca
 
 markdown: rdiscount
 permalink: pretty
