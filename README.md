@@ -15,6 +15,6 @@ Running `jekyll serve` in the root directory will serve the site on `localhost:4
 ## Building
 Running `jekyll build` will create a full build of the site in the folder `_site`, which can then be dropped into any hosting environment and work immediately. It's a static site, remember!
 
-Note that the base URL of the website is defined in `_config.yml`. This is ignored when serving on localhost, but will be built into things like navigation links and image source URLs. If you build for a staging site, you'll need to change this value before running `jekyll build` -- just remember to change it back before building for production.
+Note that the base URL of the website is defined in `_config.yml`. This is ignored when serving on localhost, but will be built into things like navigation links and image source URLs. If you build for a staging site, you'll need to change this value before running `jekyll build` -- just remember to change it back before building for production. And, of course, you'll need to change this value if the site ever changes addresses.
 
-I would highly caution against modifying the post-build static pages. This may be tempting if you're just making small changes, but modifications made this way will be overwritten if you `jekyll build` again. Anyway, once you have Jekyll installed, generating a new build takes a matter of seconds.
+I would highly caution against modifying the post-build static pages. This may be tempting if you're just making small changes, but modifications made this way will be overwritten when you `jekyll build` again. Anyway, once you have Jekyll installed, generating a new build takes a matter of seconds.
