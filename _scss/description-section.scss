@@ -96,3 +96,14 @@
     }
   }
 }
+
+// Resume only
+#tonylambert-resume {
+  h3 {
+    margin-top: $space-xl;
+  }
+
+  ul, li {
+    list-style-position: outside;
+  }
+}
